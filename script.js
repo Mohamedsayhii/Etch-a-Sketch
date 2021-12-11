@@ -13,7 +13,8 @@ let gridItems = document.querySelectorAll(`.grid-container div`);
 
 gridItems.forEach((gridItem) => {
   gridItem.addEventListener(`mousemove`, () => {
-    gridItem.style.backgroundColor = `orange`;
+    const randomColor = Math.floor(Math.random() * 16777215).toString(16);
+    gridItem.style.backgroundColor = `#` + randomColor;
     gridItem.style.transitionDuration = `1.2s`;
   });
 });
@@ -35,7 +36,6 @@ resetButton.addEventListener(`click`, () => {
 
   for (let i = 1; i <= size * size; i++) {
     let gridItem = document.createElement("div");
-    gridItem.style.border = `1px solid`;
     gridContainer.appendChild(gridItem);
   }
 
@@ -43,7 +43,8 @@ resetButton.addEventListener(`click`, () => {
 
   gridItems.forEach((gridItem) => {
     gridItem.addEventListener(`mousemove`, () => {
-      gridItem.style.backgroundColor = `orange`;
+      const randomColor = Math.floor(Math.random() * 16777215).toString(16);
+      gridItem.style.backgroundColor = `#` + randomColor;
       gridItem.style.transitionDuration = `1.2s`;
     });
   });
